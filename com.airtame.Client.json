@@ -4,7 +4,7 @@
   "runtime-version": "18.08",
   "sdk": "org.freedesktop.Sdk",
   "base": "io.atom.electron.BaseApp",
-  "base-version": "stable",
+  "base-version": "18.08",
   "command": "airtame",
   "finish-args": [
     "--share=ipc",
