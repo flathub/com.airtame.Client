@@ -31,8 +31,7 @@
             "mkdir -p export/share/applications",
             "sed -e 's/Icon=.*/Icon=com.airtame.Client/' -e '\\$/opt/$d' airtame-application/airtame-application.desktop > export/share/applications/com.airtame.Client.desktop",
             "mkdir -p export/share/icons/hicolor/512x512/apps",
-            "cp airtame-application/icon.png export/share/icons/hicolor/512x512/apps/com.airtame.Client.png",
-            "chmod a+xr ."
+            "cp airtame-application/icon.png export/share/icons/hicolor/512x512/apps/com.airtame.Client.png"
           ]
         },
         {
