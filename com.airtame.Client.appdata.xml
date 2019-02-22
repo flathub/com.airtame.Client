@@ -28,12 +28,9 @@
   <releases>
     <release version="3.3.2" date="2018-12-05">
       <description>
+        <p>Issues fixed:</p>
         <ul>
-          <li>Issues fixed:
-            <ul>
-              <li>Better support for touch interface (for example Windows Tablet PC's).</li>
-            </ul>
-          </li>
+          <li>Better support for touch interface (for example Windows Tablet PC's).</li>
         </ul>
       </description>
     </release>
