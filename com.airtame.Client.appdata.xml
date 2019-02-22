@@ -23,6 +23,7 @@
   <icon type="remote" height="128" width="128">https://lh3.ggpht.com/f7f3S_IlMRAIhx_5cYX9vWz_swCL8hY2gBTr81MfOslY5EjkxRgtnptU6JFh4HSeWcg=s128</icon>
   <categories>
     <category>Utility</category>
+  </categories>
   <!-- https://help.airtame.com/product-roadmap-and-changes/product-changes/product-changes-overview -->
   <releases>
     <release version="3.3.2" date="2018-12-05">
