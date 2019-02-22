@@ -23,8 +23,19 @@
   <icon type="remote" height="128" width="128">https://lh3.ggpht.com/f7f3S_IlMRAIhx_5cYX9vWz_swCL8hY2gBTr81MfOslY5EjkxRgtnptU6JFh4HSeWcg=s128</icon>
   <categories>
     <category>Utility</category>
+  <!-- https://help.airtame.com/product-roadmap-and-changes/product-changes/product-changes-overview -->
   <releases>
     <release version="3.3.2" date="2018-12-05"/>
+      <description>
+        <ul>
+          <li>Issues fixed:
+            <ul>
+              <li>Better support for touch interface (for example Windows Tablet PC's).</li>
+            </ul>
+          </li>
+        </ul>
+      </description>
+    </release>
   </releases>
   ​<launchable type="desktop-id">com.airtame.Client.desktop</launchable>
   <update_contact>kristian_at_klausen.dk</update_contact>
