@@ -25,7 +25,7 @@
     <category>Utility</category>
   <!-- https://help.airtame.com/product-roadmap-and-changes/product-changes/product-changes-overview -->
   <releases>
-    <release version="3.3.2" date="2018-12-05"/>
+    <release version="3.3.2" date="2018-12-05">
       <description>
         <ul>
           <li>Issues fixed:
