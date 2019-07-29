@@ -26,6 +26,36 @@
   </categories>
   <!-- https://help.airtame.com/product-roadmap-and-changes/product-changes/product-changes-overview -->
   <releases>
+    <release version="3.5.0" date="2019-07">
+      <description>
+        <p>New features:</p>
+        <ul>
+          <li>mDNS discovery support on Windows, Mac and Linux. Chromebook support will be added later.</li>
+          <li>Application now automatically sets time and date to Airtame during the setup. It will help to connect Airtame that has no NTP connection to Airtame Cloud</li>
+        </ul>
+        <p>Issues fixed:</p>
+        <ul>
+          <li>Soundflower rework. Improved installation logic, to accommodate macOS security</li>
+          <li>Manual mode rework. Only the next streaming session will be in manual mode now. If you want to always stream in manual mode, there is a trigger for that.</li>
+          <li>Linux improvements. Application will install from snap package.</li>
+        </ul>
+        <p>Important bug fixes</p>
+        <ul>
+          <li>Windows update now handles UAC requests properly</li>
+          <li>Fixed SSDP issues when other service would get hold of port 1900</li>
+          <li>Fixed a bug when stale out-of-the-box devices were not removed from Airtame device list</li>
+          <li>Fixed a bug when launch on start worked only after second reboot on Windows</li>
+          <li>Guest application will now only ask for Firewall permissions once</li>
+          <li>Fixed a bug when it was impossible to re-setup encrypted device via manual setup flow</li>
+          <li>Fixed a bug when 2.4 network sometime would not show in the networks list if there is 5.2 network with the same name</li>
+        </ul>
+        <p>Others:</p>
+        <ul>
+          <li>SSDP packets TTL value is now 255. Should make it easier to send discovery packets across multiple VLANs</li>
+          <li>"Ignore certificate error" option was added to settings. If you have internal dashboard with insecure certificate set as digital signage, new Airtame browser won't show it because of security settings. To bypass, use the option in the settings.</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.3.2" date="2018-12-05">
       <description>
         <p>Issues fixed:</p>
