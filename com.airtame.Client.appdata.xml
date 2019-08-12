@@ -66,5 +66,6 @@
     </release>
   </releases>
   ​<launchable type="desktop-id">com.airtame.Client.desktop</launchable>
+  <content_rating type="oars-1.1" />
   <update_contact>kristian_at_klausen.dk</update_contact>
 </component>
