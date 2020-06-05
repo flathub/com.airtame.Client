@@ -26,6 +26,72 @@
   </categories>
   <!-- https://help.airtame.com/product-roadmap-and-changes/product-changes/product-changes-overview -->
   <releases>
+    <release version="4.0.1" date="2020-05-12">
+      <description>
+        <p>Issues fixed:</p>
+        <ul>
+          <li>Fixed expired signing certificate on Windows app</li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.0.0" date="2020-03-24">
+      <description>
+        <p>New features</p>
+        <ul>
+          <li>The application can be minimised/maximised to/from task bar, moved around the screen(s) and resized vertically.</li>
+          <li>SoundFlower kernel extension was replaced with Airtame Audio driver for Mac.</li>
+        </ul>
+        <p>Improvements</p>
+        <ul>
+          <li>Cross-VLAN support for mDNS.</li>
+          <li>The application opens minimised on system startup.</li>
+          <li>The application will only show existing devices while searching (better support for connect via IP or DNS name).</li>
+          <li>Use white tray icon on Mac dark mode and Linux.</li>
+          <li>UI changes to streaming notification.</li>
+          <li>UI changes to Setup Flow and Device Settings.</li>
+        </ul>
+        <p>Issues fixed</p>
+        <ul>
+          <li>3.6.1 MSI returning 1603 error code.</li>
+          <li>Windows Guest app looking for new updates.</li>
+          <li>MSI application start on user login if MSI installer was invoked with WRAPPED_ARGUMENTS="/autostart=true".</li>
+          <li>Favourite devices update the IP address on discovery: if Airtame marked as "Favourite" has changed the IP, the user will be able to access it through the app without having to re-favourite it.</li>
+          <li>Setup flow configuring WiFi network when ethernet setup was selected.</li>
+          <li>Pincode not getting focus on touch devices having the keyboard layout in a foreign language (e.g. French).</li>
+        </ul>
+      </description>
+    </release>
+    <release version="3.6.1" date="2019-11-26">
+      <description>
+        <p>Fix for macOS Catalina to accommodate for new flow for getting screen recording permissions.</p>
+      </description>
+    </release>
+    <release version="3.6.0" date="2019-11-14">
+      <description>
+        <p>New features:</p>
+        <ul>
+          <li>MacOS Catalina flow for approving video recording and microphone access.</li>
+          <li>UI changes of device resolutions in Airtame Settings menu (warnings if current resolution doesn't match the configured resolution and warnings if EDID read failed).</li>
+        </ul>
+        <p>Issues fixed:</p>
+        <ul>
+          <li>Improvements to the Airtame app search functionality.</li>
+          <li>Improvements to the streamer module: New WASAPI implementation for Windows (sound capture). </li>
+          <li>General bug fixes; Mouse cursor drawing for Single Window Sharing on Windows;</li>
+          <li>Single Windows Sharing scaling bug fix.</li>
+          <li>Disable audio button while streaming if Airtame resolution doesn't support audio.</li>
+          <li>Change Ubuntu snap confinement to "strict" so we can publish in Ubuntu store: This means that Linux application won't detect unconfigured/oob devices anymore, but setup will have to be through the manual setup flow.</li>
+        </ul>
+        <p>Important bug fixes</p>
+        <ul>
+          <li>Fix the issue when Airtame app sometimes couldn't reconnect to Airtame.</li>
+          <li>Fix for on-screen keyboard not showing up on PIN code on touch devices.</li>
+          <li>Fix for disconnecting the stream when pressing 'Enter' key after filling in the PIN code.</li>
+          <li>Fix for Airtame app moving outside of screen after streaming.</li>
+          <li>Fix duplicated entries in Windows Program and Features for the Airtame App.</li>
+        </ul>
+      </description>
+    </release>
     <!-- appstream won't accept a date without a day: https://github.com/ximion/appstream/issues/245 -->
     <release version="3.5.0" date="2019-07-01">
       <description>

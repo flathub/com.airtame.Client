@@ -35,7 +35,7 @@
             "rmdir opt",
             "mkdir -p export/share/applications",
             "sed -e 's/Icon=.*/Icon=com.airtame.Client/' -e '\\$/opt/$d' usr/share/applications/airtame-application.desktop > export/share/applications/com.airtame.Client.desktop",
-            "for size in 16 24 32 48 64 96 128 256 512 1024; do install -D usr/share/icons/hicolor/${size}x${size}/apps/airtame-application.png export/share/icons/hicolor/${size}x${size}/apps/com.airtame.Client.png; done",
+            "for size in 16 32 48 64 128 256 512 1024; do install -D usr/share/icons/hicolor/${size}x${size}/apps/airtame-application.png export/share/icons/hicolor/${size}x${size}/apps/com.airtame.Client.png; done",
             "rm -r usr"
           ]
         },
@@ -43,7 +43,7 @@
           "type": "script",
           "dest-filename": "airtame.sh",
           "commands": [
-            "exec /app/extra/Airtame/airtame-application \"$@\""
+            "exec /app/extra/Airtame/airtame-application --no-sandbox \"$@\""
           ]
         },
         {
@@ -56,9 +56,9 @@
           "only-arches": [
             "x86_64"
           ],
-          "url": "https://downloads-cdn.airtame.com/app/latest/linux/Airtame-3.5.0.deb",
-          "sha256": "f4d2c0ec7d4f26f9a37853f7c0c885fe383e0b7b0114efe01a2df2ca09d5e063",
-          "size": 45998056
+          "url": "https://downloads-cdn.airtame.com/app/latest/linux/Airtame-4.0.1.deb",
+          "sha256": "0231675804c0c8153dd001caa631a8b5b0d768550c1fc76fa5daef9e8c529204",
+          "size": 54506020
         }
       ]
     }
