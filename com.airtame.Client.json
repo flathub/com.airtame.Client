@@ -13,37 +13,45 @@
   ],
   "modules": [
     {
+      "name": "squashfs-tools",
+      "make-args": ["XZ_SUPPORT=1"],
+      "make-install-args": ["INSTALL_DIR=/app/bin"],
+      "no-autogen": true,
+      "subdir": "squashfs-tools",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/plougher/squashfs-tools/archive/4.4.tar.gz",
+          "sha256": "a7fa4845e9908523c38d4acf92f8a41fdfcd19def41bd5090d7ad767a6dc75c3"
+        }
+      ]
+    },
+    {
       "name": "airtame",
       "buildsystem": "simple",
       "build-commands": [
         "install -D apply_extra /app/bin/apply_extra",
         "install -D airtame.sh /app/bin/airtame",
-        "install -D com.airtame.Client.appdata.xml /app/share/metainfo/com.airtame.Client.appdata.xml",
-        "install -D /usr/bin/ar /app/bin/ar",
-        "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib"
+        "install -D com.airtame.Client.appdata.xml /app/share/metainfo/com.airtame.Client.appdata.xml"
       ],
       "sources": [
         {
           "type": "script",
           "dest-filename": "apply_extra",
           "commands": [
-            "ar -x Airtame.deb data.tar.xz",
-            "rm Airtame.deb",
-            "tar -xf data.tar.xz",
-            "rm data.tar.xz",
-            "mv opt/Airtame .",
-            "rmdir opt",
-            "mkdir -p export/share/applications",
-            "sed -e 's/Icon=.*/Icon=com.airtame.Client/' -e '\\$/opt/$d' usr/share/applications/airtame-application.desktop > export/share/applications/com.airtame.Client.desktop",
-            "for size in 16 32 48 64 128 256 512 1024; do install -D usr/share/icons/hicolor/${size}x${size}/apps/airtame-application.png export/share/icons/hicolor/${size}x${size}/apps/com.airtame.Client.png; done",
-            "rm -r usr"
+            "unsquashfs airtame.snap",
+            "rm airtame.snap",
+            "mv squashfs-root airtame",
+            "install -D airtame/meta/gui/airtame-application.desktop export/share/applications/com.airtame.Client.desktop",
+            "sed -e 's:Icon=.*:Icon=com.airtame.Client:' -e 's:Exec=.*:Exec=/app/extra/airtame/airtame-application:' -i export/share/applications/com.airtame.Client.desktop",
+            "install -D airtame/meta/gui/icon.png export/share/icons/hicolor/1024x1024/apps/com.airtame.Client.png"
           ]
         },
         {
           "type": "script",
           "dest-filename": "airtame.sh",
           "commands": [
-            "exec /app/extra/Airtame/airtame-application --no-sandbox \"$@\""
+            "exec /app/extra/airtame/airtame-application --no-sandbox \"$@\""
           ]
         },
         {
@@ -52,13 +60,13 @@
         },
         {
           "type": "extra-data",
-          "filename": "Airtame.deb",
+          "filename": "airtame.snap",
           "only-arches": [
             "x86_64"
           ],
-          "url": "https://downloads-cdn.airtame.com/app/latest/linux/Airtame-4.0.1.deb",
-          "sha256": "0231675804c0c8153dd001caa631a8b5b0d768550c1fc76fa5daef9e8c529204",
-          "size": 54506020
+          "url": "https://api.snapcraft.io/api/v1/snaps/download/DueSfgqiYVa9th2wjbXaEUwFYqMpROv3_10.snap",
+          "sha256": "cf0e3926ac1ef0bc31eab6f02f8e7a8321f0bc0cdaa39c515518420f53721dd8",
+          "size": 65101824
         }
       ]
     }
