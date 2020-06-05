@@ -43,7 +43,7 @@
             "rm airtame.snap",
             "mv squashfs-root airtame",
             "install -D airtame/meta/gui/airtame-application.desktop export/share/applications/com.airtame.Client.desktop",
-            "sed -e 's:Icon=.*:Icon=com.airtame.Client:' -e 's:Exec=.*:Exec=/app/bin/airtame:' -i export/share/applications/com.airtame.Client.desktop",
+            "sed -e 's:Icon=.*:Icon=com.airtame.Client:' -e 's:Exec=.*:Exec=com.airtame.Client:' -i export/share/applications/com.airtame.Client.desktop",
             "install -D airtame/meta/gui/icon.png export/share/icons/hicolor/1024x1024/apps/com.airtame.Client.png"
           ]
         },
