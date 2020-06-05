@@ -14,13 +14,13 @@
   <url type="homepage">https://airtame.com/</url>
   <screenshots>
     <screenshot type="default">
-      <image>https://airtame.com/wp-content/uploads/2018/10/airtame-2-product-App-features-2.1-1.png</image>
+      <image>https://dashboard.snapcraft.io/site_media/appmedia/2020/04/Take_control.jpg</image>
+    </screenshot>
+    <screenshot>
+      <image>https://dashboard.snapcraft.io/site_media/appmedia/2020/04/Share_together_1_1.jpg</image>
     </screenshot>
   </screenshots>
-  <!-- These are the icons for the android apps, from https://play.google.com/store/apps/details?id=com.airtame.airtameapp -->
-  <!-- TODO: They aren't a 100% match, so lets replace them with some better icons in the future -->
-  <icon type="remote" height="64" width="64">https://lh3.ggpht.com/f7f3S_IlMRAIhx_5cYX9vWz_swCL8hY2gBTr81MfOslY5EjkxRgtnptU6JFh4HSeWcg=s64</icon>
-  <icon type="remote" height="128" width="128">https://lh3.ggpht.com/f7f3S_IlMRAIhx_5cYX9vWz_swCL8hY2gBTr81MfOslY5EjkxRgtnptU6JFh4HSeWcg=s128</icon>
+  <icon type="remote" height="512" width="512">https://dashboard.snapcraft.io/site_media/appmedia/2019/05/icon-windows.png</icon>
   <categories>
     <category>Utility</category>
   </categories>
