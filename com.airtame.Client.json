@@ -66,7 +66,12 @@
           ],
           "url": "https://api.snapcraft.io/api/v1/snaps/download/DueSfgqiYVa9th2wjbXaEUwFYqMpROv3_10.snap",
           "sha256": "cf0e3926ac1ef0bc31eab6f02f8e7a8321f0bc0cdaa39c515518420f53721dd8",
-          "size": 65101824
+          "size": 65101824,
+          "x-checker-data": {
+            "type": "snapcraft",
+            "name": "airtame-application",
+            "channel": "stable"
+          }
         }
       ]
     }
