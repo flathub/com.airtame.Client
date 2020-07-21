@@ -56,9 +56,9 @@
           "only-arches": [
             "x86_64"
           ],
-          "url": "https://downloads-cdn.airtame.com/app/latest/linux/Airtame-4.0.1.deb",
-          "sha256": "0231675804c0c8153dd001caa631a8b5b0d768550c1fc76fa5daef9e8c529204",
-          "size": 54506020
+          "url": "https://downloads-cdn.airtame.com/app/latest/linux/Airtame-4.1.0.deb",
+          "sha256": "7c48e637cdde10868f7e550ad1c6eb285db6c9f9af996c123b7d02b3a2d78b4d",
+          "size": 58558948
         }
       ]
     }

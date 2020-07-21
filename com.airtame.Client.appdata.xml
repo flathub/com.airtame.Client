@@ -26,6 +26,29 @@
   </categories>
   <!-- https://help.airtame.com/product-roadmap-and-changes/product-changes/product-changes-overview -->
   <releases>
+    <release version="4.1.0" date="2020-06-30">
+      <description>
+        <p>New features</p>
+          <ul>
+            <li>Additional security step during setup flow: users can choose to set a password for the Airtame's Access Point and its settings during the setup flow. They can skip the step and configure this later, if they wish. </li>
+            <li>Do Not Disturb functionality on macOS while streaming: users can opt-out of this functionality in the Preferences menu fo the App. </li>
+          </ul>
+        <p>Improvements</p>
+          <ul>
+            <li>Search results have been improved to better match multiple search terms.</li>
+            <li>UI and text changes for the "Not able to find this device" screen.</li>
+            <li>UI and text changes for the setup flow confirmation step.</li>
+          </ul>
+        <p>Bug fixes</p>
+          <ul>
+            <li>MSI starting at system startup even though the installer was invoked with WRAPPED_ARGUMENTS="/autostart=false".</li>
+            <li>Setup flow logic sometimes not recognising it has successfully connected to the Airtame device.</li>
+            <li>Setup flow failing on non-English OS versions.</li>
+            <li>Non-admin macOS users failing to start the application.</li>
+            <li>Broken UI when window picking fails because the window cannot be shared (for instance Task Manager window).</li>
+          </ul>
+      </description>
+    </release>
     <release version="4.0.1" date="2020-05-12">
       <description>
         <p>Issues fixed:</p>
