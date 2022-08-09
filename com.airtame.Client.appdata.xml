@@ -26,6 +26,40 @@
   </categories>
   <!-- https://help.airtame.com/product-roadmap-and-changes/product-changes/product-changes-overview -->
   <releases>
+    <release version="4.2.1" date="2021-07-05">
+      <description>
+        <p>Bug fixes</p>
+          <ul>
+            <li>Fixed an issue where the app would crash when attempting to stream to an offline device</li>
+          </ul>
+      </description>
+    </release>
+    <release version="4.2.0" date="2021-06-07">
+      <description>
+        <p>Improvements</p>
+          <ul>
+            <li>Streaming via the Airtame app (native Airtame protocol) now utilizes TCP as a transport layer protocol instead of ENET on UDP. This should lead to increased performance when screen sharing, in particular during video playback</li>
+          </ul>
+        <p>Bug fixes</p>
+          <ul>
+            <li>Fixed the issue when a stream would not start from a source device with an odd resolution (e.g. 1904x949)</li>
+          </ul>
+      </description>
+    </release>
+    <release version="4.1.1" date="2020-08-17">
+      <description>
+        <p>Improvements</p>
+          <ul>
+            <li>Allow analytics to use system proxy</li>
+            <li>Improve the analytics retry mechanism (in case an analytics event failed to be sent)</li>
+          </ul>
+        <p>Bug fixes</p>
+          <ul>
+            <li>Fix for the missing tray icon on Windows when dark mode is enabled for applications</li>
+            <li>Fix for the app getting stuck in the Setup Flow when trying to connect to a device</li>
+          </ul>
+      </description>
+    </release>
     <release version="4.1.0" date="2020-06-30">
       <description>
         <p>New features</p>
