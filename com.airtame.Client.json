@@ -1,10 +1,10 @@
 {
   "app-id": "com.airtame.Client",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "21.08",
+  "runtime-version": "22.08",
   "sdk": "org.freedesktop.Sdk",
   "base": "org.electronjs.Electron2.BaseApp",
-  "base-version": "21.08",
+  "base-version": "22.08",
   "command": "airtame",
   "separate-locales": false,
   "finish-args": [
