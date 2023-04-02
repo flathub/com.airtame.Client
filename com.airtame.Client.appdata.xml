@@ -26,6 +26,37 @@
   </categories>
   <!-- https://help.airtame.com/hc/en-us/articles/5348392729117-Changelog-Product-Changes-Airtame-Application- -->
   <releases>
+    <release version="4.5.3" date="2022-08-12" />
+    <release version="4.5.2" date="2022-09-13">
+      <description>
+        <p>Bug fixes</p>
+          <ul>
+            <li>Fixed an issue where devices on Firmware version 3.5.1 could no longer be set up using the Airtame application</li>
+          </ul>
+      </description>
+    </release>
+    <release version="4.5.0" date="2022-09-06">
+      <description>
+        <p>New features</p>
+          <ul>
+            <li>802.1X authentication for ethernet added in setup flow and device settings</li>
+            <li>Rooms: Sign in with Google Calendar to have easier access to your meetings</li>
+            <li>Rooms: Added the ability to join calls on Linux</li>
+          </ul>
+        <p>Improvements</p>
+          <ul>
+            <li>New streaming technology for Linux: WebRTC-based streaming to provide a smoother screen sharing experience and the ability to select which screen to share in multi-screen setups. This also adds support for the latest Ubuntu LTS version</li>
+            <li>Audio on Linux is for the moment no longer supported. We will seek to add audio at a later date. Customers who wish to use audio streaming on Linux should stay on app version 4.1.1</li>
+            <li>Added new security controls following Electron best practices, including but not limited to the prevention of untrusted resources</li>
+          </ul>
+        <p>Bug fixes</p>
+          <ul>
+            <li>Rooms: Fixed an issue that prevented sharing a single window to a Teams call when two overlapping windows of the same program are present, e.g. during a PowerPoint presentation</li>
+            <li>Rooms: Fixed an issue that prevented sharing content from a secondary monitor to a Teams call</li>
+            <li>Rooms: Cancelling a request to join a call in the Airtame application should now properly return the Airtame Hub to an idle state</li>
+          </ul>
+      </description>
+    </release>
     <release version="4.2.1" date="2021-07-05">
       <description>
         <p>Bug fixes</p>
