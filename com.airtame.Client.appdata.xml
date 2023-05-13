@@ -20,7 +20,6 @@
       <image>https://dashboard.snapcraft.io/site_media/appmedia/2020/04/Share_together_1_1.jpg</image>
     </screenshot>
   </screenshots>
-  <icon type="remote" height="512" width="512">https://dashboard.snapcraft.io/site_media/appmedia/2019/05/icon-windows.png</icon>
   <categories>
     <category>Utility</category>
   </categories>

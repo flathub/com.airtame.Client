@@ -19,11 +19,14 @@
       "name": "airtame",
       "buildsystem": "simple",
       "build-commands": [
-        "install -D apply_extra /app/bin/apply_extra",
-        "install -D airtame.sh /app/bin/airtame",
-        "install -D com.airtame.Client.appdata.xml /app/share/metainfo/com.airtame.Client.appdata.xml",
-        "install -D /usr/bin/ar /app/bin/ar",
-        "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib"
+        "mkdir -p ${FLATPAK_DEST}/bin ${FLATPAK_DEST}/lib",
+        "install -D apply_extra ${FLATPAK_DEST}/bin/apply_extra",
+        "install -D airtame.sh ${FLATPAK_DEST}/bin/airtame",
+        "install -Dm644 -t ${FLATPAK_DEST}/share/metainfo/ ${FLATPAK_ID}.appdata.xml",
+        "install -Dm644 -t ${FLATPAK_DEST}/share/applications/ ${FLATPAK_ID}.desktop",
+        "install -Dm644 -t ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/ ${FLATPAK_ID}.png",
+        "install -D /usr/bin/ar ${FLATPAK_DEST}/bin/ar",
+        "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so ${FLATPAK_DEST}/lib"
       ],
       "sources": [
         {
@@ -35,11 +38,7 @@
             "tar -xf data.tar.xz",
             "rm data.tar.xz",
             "mv opt/Airtame .",
-            "rmdir opt",
-            "mkdir -p export/share/applications",
-            "sed -e 's/Icon=.*/Icon=com.airtame.Client/' -e '\\$/opt/$d' usr/share/applications/airtame-application.desktop > export/share/applications/com.airtame.Client.desktop",
-            "for size in 16 32 48 64 128 256 512 1024; do install -D usr/share/icons/hicolor/${size}x${size}/apps/airtame-application.png export/share/icons/hicolor/${size}x${size}/apps/com.airtame.Client.png; done",
-            "rm -r usr"
+            "rm -rf usr opt"
           ]
         },
         {
@@ -52,6 +51,14 @@
         {
           "type": "file",
           "path": "com.airtame.Client.appdata.xml"
+        },
+        {
+          "type": "file",
+          "path": "com.airtame.Client.png"
+        },
+        {
+          "type": "file",
+          "path": "com.airtame.Client.desktop"
         },
         {
           "type": "extra-data",
