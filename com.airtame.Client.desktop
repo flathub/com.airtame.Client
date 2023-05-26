@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Airtame
+Exec=airtame %U
+Terminal=false
+Type=Application
+Icon=com.airtame.Client
+StartupWMClass=Airtame
+Comment=Airtame is a wireless streaming solution.
+MimeType=x-scheme-handler/airtame;
+Categories=AudioVideo;
