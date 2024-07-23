@@ -7,11 +7,12 @@ base-version: '23.08'
 command: airtame
 separate-locales: false
 finish-args:
-  - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
   - --share=ipc
+  - --share=network
   - --device=dri
   - --socket=pulseaudio
-  - --share=network
 modules:
   - name: squashfs
     buildsystem: simple
@@ -26,8 +27,7 @@ modules:
   - name: airtame
     buildsystem: simple
     build-commands:
-      - mkdir -p ${FLATPAK_DEST}/bin ${FLATPAK_DEST}/lib
-      - install -D apply_extra ${FLATPAK_DEST}/bin/apply_extra
+      - install -D apply_extra ${FLATPAK_DEST}/bin
       - install -D airtame.sh ${FLATPAK_DEST}/bin/airtame
     post-install:
       - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo/ ${FLATPAK_ID}.appdata.xml
@@ -52,10 +52,8 @@ modules:
           type: rotating-url
           url: 'https://downloads-website.airtame.com/get.php?platform=linux'
           pattern: 'https://airtame-app.b-cdn.net/app/latest/linux/Airtame-([0-9.]+).snap'
-      - type: script
-        dest-filename: airtame.sh
-        commands:
-          - zypak-wrapper /app/extra/Airtame/airtame-application "$@"
+      - type: file
+        path: airtame.sh
       - type: file
         path: com.airtame.Client.appdata.xml
       - type: file
