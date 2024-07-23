@@ -2,10 +2,12 @@
 <component type="desktop">
   <id>com.airtame.Client</id>
   <name>Airtame</name>
-  <summary>Airtame is a wireless streaming solution</summary>
-  <developer_name>Airtame</developer_name>
+  <summary>Interact wirelessly with your shared screens in seconds</summary>
+  <developer id="com.airtame">
+      <name>Airtame</name>
+  </developer>
   <description>
-  <p>Airtame is a small wireless HDMI device that plugs into the HDMI port of any screen or projector. Unlike other wireless HDMI devices, nothing is plugged into your computer or smartphone. Simply download our app and stream your content to the screen from any major computer platform, tablet, or smartphone.</p>
+  <p>Revolutionize the way you connect, communicate, and collaborate with Airtame. The user-friendly solution enhancing productivity and engagement, in any environment inside your school or business.</p>
   <p>NOTE: This wrapper is not verified by, affiliated with, or supported by Airtame Inc.</p>
 </description>
   <metadata_license>CC0-1.0</metadata_license>
@@ -23,8 +25,20 @@
   <categories>
     <category>Utility</category>
   </categories>
-  <!-- https://help.airtame.com/hc/en-us/articles/5348392729117-Changelog-Product-Changes-Airtame-Application- -->
+  <!-- https://changelog.airtame.com/en?category=airtame+app</url> -->
   <releases>
+    <release version="4.10.0" date="2024-04-23">
+      <description>
+        <p>New features</p>
+          <ul>
+            <li>Conferencing: Screen sharing into video calls with audio from Mac, when you are hosting the call</li>
+          </ul>
+        <p>Bug fixes</p>
+          <ul>
+            <li>Conferencing: Mouse curser might duplicate on Windows while screensharing into calls</li>
+          </ul>
+      </description>
+    </release>
     <release version="4.5.3" date="2022-08-12" />
     <release version="4.5.2" date="2022-09-13">
       <description>
