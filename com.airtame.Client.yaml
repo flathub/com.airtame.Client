@@ -1,6 +1,6 @@
 app-id: com.airtame.Client
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
 base-version: '22.08'
@@ -48,8 +48,8 @@ modules:
         filename: Airtame.deb
         only-arches:
           - x86_64
-        url: https://downloads.airtame.com/app/latest/linux/Airtame-4.5.3.deb
-        sha256: 4190438f379c5a83976bd8220647a0ed5afd56daa7c1da5c23c669578342f329
-        size: 73629482
+        url: https://downloads.airtame.com/app/latest/linux/Airtame-4.10.0.deb
+        sha256: 918c906422bb9b7feb0d3c2177ef311ab198399c53480f76abfe28910ef74d2d
+        size: 91426268
 
 
