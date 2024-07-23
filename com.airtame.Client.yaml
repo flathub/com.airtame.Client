@@ -3,37 +3,55 @@ runtime: org.freedesktop.Platform
 runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: '22.08'
+base-version: '23.08'
 command: airtame
 separate-locales: false
 finish-args:
+  - --socket=x11
   - --share=ipc
   - --device=dri
   - --socket=pulseaudio
-  - --socket=x11
   - --share=network
 modules:
+  - name: squashfs
+    buildsystem: simple
+    build-commands:
+      - make XZ_SUPPORT=1 INSTALL_PREFIX=${FLATPAK_DEST} -C squashfs-tools -j ${FLATPAK_BUILDER_N_JOBS}
+        install
+    sources:
+      - type: git
+        url: https://github.com/plougher/squashfs-tools.git
+        tag: 4.5.1
+
   - name: airtame
     buildsystem: simple
     build-commands:
       - mkdir -p ${FLATPAK_DEST}/bin ${FLATPAK_DEST}/lib
       - install -D apply_extra ${FLATPAK_DEST}/bin/apply_extra
       - install -D airtame.sh ${FLATPAK_DEST}/bin/airtame
+    post-install:
       - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo/ ${FLATPAK_ID}.appdata.xml
       - install -Dm644 -t ${FLATPAK_DEST}/share/applications/ ${FLATPAK_ID}.desktop
       - install -Dm644 -t ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/ ${FLATPAK_ID}.png
-      - install -D /usr/bin/ar ${FLATPAK_DEST}/bin/ar
-      - ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so ${FLATPAK_DEST}/lib
+
     sources:
       - type: script
         dest-filename: apply_extra
         commands:
-          - ar -x Airtame.deb data.tar.xz
-          - rm Airtame.deb
-          - tar -xf data.tar.xz
-          - rm data.tar.xz
-          - mv opt/Airtame .
-          - rm -rf usr opt
+          - unsquashfs Airtame.snap > /dev/null
+          - rm -rf squashfs-root/meta
+          - mv squashfs-root Airtame
+          - rm -f Airtame.snap
+      - type: extra-data
+        filename: Airtame.snap
+        only-arches: [x86_64]
+        url: https://airtame-app.b-cdn.net/app/latest/linux/Airtame-4.10.0.snap
+        sha256: 80426cf64b853daf9dc7ae44bf1206adfec22c3ebc4ef8f37d274fc167647eae
+        size: 110174208
+        x-checker-data:
+          type: rotating-url
+          url: 'https://downloads-website.airtame.com/get.php?platform=linux'
+          pattern: 'https://airtame-app.b-cdn.net/app/latest/linux/Airtame-([0-9.]+).snap'
       - type: script
         dest-filename: airtame.sh
         commands:
@@ -44,12 +62,4 @@ modules:
         path: com.airtame.Client.png
       - type: file
         path: com.airtame.Client.desktop
-      - type: extra-data
-        filename: Airtame.deb
-        only-arches:
-          - x86_64
-        url: https://downloads.airtame.com/app/latest/linux/Airtame-4.10.0.deb
-        sha256: 918c906422bb9b7feb0d3c2177ef311ab198399c53480f76abfe28910ef74d2d
-        size: 91426268
-
 
