@@ -45,13 +45,13 @@ modules:
       - type: extra-data
         filename: Airtame.snap
         only-arches: [x86_64]
-        url: https://airtame-app.b-cdn.net/app/latest/linux/Airtame-4.10.0.snap
-        sha256: 80426cf64b853daf9dc7ae44bf1206adfec22c3ebc4ef8f37d274fc167647eae
+        url: https://airtame-app.b-cdn.net/app/latest/linux/Airtame-4.11.0.snap
+        sha256: 388bb13d9e2be6f71cd4c8b90649da5d1977dc10416c191d02036cd95cf29dca
         size: 110174208
         x-checker-data:
           type: rotating-url
-          url: 'https://downloads-website.airtame.com/get.php?platform=linux'
-          pattern: 'https://airtame-app.b-cdn.net/app/latest/linux/Airtame-([0-9.]+).snap'
+          url: https://downloads-website.airtame.com/get.php?platform=linux
+          pattern: https://airtame-app.b-cdn.net/app/latest/linux/Airtame-([0-9.]+).snap
       - type: file
         path: airtame.sh
       - type: file
