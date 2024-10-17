@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export TMPDIR="$XDG_RUNTIME_DIR/app/${FLATPAK_ID:-dev.vencord.Vesktop}"
+export TMPDIR="$XDG_RUNTIME_DIR/app/${FLATPAK_ID:-com.airtame.Client}"
 
 declare -a FLAGS=()
 
