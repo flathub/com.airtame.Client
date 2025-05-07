@@ -45,9 +45,9 @@ modules:
       - type: extra-data
         filename: Airtame.snap
         only-arches: [x86_64]
-        url: https://airtame-app.b-cdn.net/app/latest/linux/Airtame-4.12.0.snap
-        sha256: 5c92d06f23eba15c974972cd912487bf6fa7bd97f632591f58c537ecca8b6c85
-        size: 110178304
+        url: https://airtame-app.b-cdn.net/app/latest/linux/Airtame-4.13.1.snap
+        sha256: de9c7e4d54ad9f7d204e51b103dc9729fb9a6276bc84badbd5a52110f5b400e2
+        size: 110170112
         x-checker-data:
           type: rotating-url
           url: https://downloads-website.airtame.com/get.php?platform=linux
