@@ -7,9 +7,10 @@
       <name>Airtame</name>
   </developer>
   <description>
-  <p>Revolutionize the way you connect, communicate, and collaborate with Airtame. The user-friendly solution enhancing productivity and engagement, in any environment inside your school or business.</p>
-  <p>NOTE: This wrapper is not verified by, affiliated with, or supported by Airtame Inc.</p>
-</description>
+    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by Airtame Inc.**</p>
+    <p>Revolutionize the way you connect, communicate, and collaborate with Airtame. 
+       The user-friendly solution enhancing productivity and engagement, in any environment inside your school or business.</p>
+  </description>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
   <url type="help">https://help.airtame.com/</url>
@@ -27,8 +28,11 @@
   </categories>
   <!-- https://changelog.airtame.com/en?category=airtame+app</url> -->
   <releases>
-    <release version="4.14.0" date="2025-07-30">
+    <release version="4.15.0" date="2025-12-03">
       <description></description>
+    </release>
+    <release version="4.14.0" date="2025-07-30">
+      <description/>
     </release>
     <release version="4.13.1" date="2025-05-07">
       <description/>
