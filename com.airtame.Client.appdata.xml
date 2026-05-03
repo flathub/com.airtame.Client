@@ -8,13 +8,13 @@
   </developer>
   <description>
     <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by Airtame Inc.**</p>
-    <p>Revolutionize the way you connect, communicate, and collaborate with Airtame. 
+    <p>Revolutionize the way you connect, communicate, and collaborate with Airtame.
        The user-friendly solution enhancing productivity and engagement, in any environment inside your school or business.</p>
   </description>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
-  <url type="help">https://help.airtame.com/</url>
-  <url type="homepage">https://airtame.com/</url>
+  <url type="homepage">https://airtame.com</url>
+  <url type="help">https://help.airtame.com</url>
   <screenshots>
     <screenshot type="default">
       <image>https://dashboard.snapcraft.io/site_media/appmedia/2020/04/Take_control.jpg</image>
@@ -23,26 +23,14 @@
       <image>https://dashboard.snapcraft.io/site_media/appmedia/2020/04/Share_together_1_1.jpg</image>
     </screenshot>
   </screenshots>
-  <categories>
-    <category>Utility</category>
-  </categories>
-  <!-- https://changelog.airtame.com/en?category=airtame+app</url> -->
   <releases>
     <release version="4.15.0" date="2025-12-03">
-      <description></description>
+      <url>https://changelog.airtame.com/en?category=airtame+app</url>
     </release>
-    <release version="4.14.0" date="2025-07-30">
-      <description/>
-    </release>
-    <release version="4.13.1" date="2025-05-07">
-      <description/>
-    </release>
-    <release version="4.12.0" date="2024-12-02">
-      <description/>
-    </release>
-    <release version="4.11.0" date="2024-09-10">
-      <description/>
-    </release>
+    <release version="4.14.0" date="2025-07-30"/>
+    <release version="4.13.1" date="2025-05-07"/>
+    <release version="4.12.0" date="2024-12-02"/>
+    <release version="4.11.0" date="2024-09-10"/>
     <release version="4.10.0" date="2024-04-23">
       <description>
         <p>New features</p>
