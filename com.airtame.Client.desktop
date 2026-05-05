@@ -7,4 +7,4 @@ Icon=com.airtame.Client
 StartupWMClass=Airtame
 Comment=Airtame is a wireless streaming solution.
 MimeType=x-scheme-handler/airtame;
-Categories=AudioVideo;
+Categories=AudioVideo;Utility;

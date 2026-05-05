@@ -1,9 +1,9 @@
 app-id: com.airtame.Client
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: '23.08'
+base-version: '25.08'
 command: airtame
 separate-locales: false
 finish-args:
@@ -22,7 +22,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/plougher/squashfs-tools.git
-        tag: 4.5.1
+        tag: 4.7.5
+        commit: 708c59ae80853b0845017c33b42e56061cc546cd
 
   - name: airtame
     buildsystem: simple
